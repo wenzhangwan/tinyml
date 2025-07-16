@@ -1,0 +1,3 @@
+fine-grained pruning
+magnitude-based pruning -> get the ith important value of the matrix -> make a mask -> multiply to get the matrix.
+sensitivity scan -> find the optimal sparsity value of each layer. -> fine tune
