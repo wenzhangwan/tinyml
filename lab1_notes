@@ -1,3 +1,7 @@
 fine-grained pruning
 magnitude-based pruning -> get the ith important value of the matrix -> make a mask -> multiply to get the matrix.
 sensitivity scan -> find the optimal sparsity value of each layer. -> fine tune
+
+channel pruning
+get the pruning channel numbers through pruning ratio -> pruning the channels simply by keep the first n(1-prune_ratio) channels -> sorting the channel by Forbenius norm, the pruning. the accuracy is improved
+-> performance check: remove 30% weights, remove 50% MACs and the latency is a little larger than 50$.
