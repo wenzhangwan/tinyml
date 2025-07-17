@@ -1,3 +1,4 @@
+Lab 1:
 fine-grained pruning
 magnitude-based pruning -> get the ith important value of the matrix -> make a mask -> multiply to get the matrix.
 sensitivity scan -> find the optimal sparsity value of each layer. -> fine tune
@@ -5,3 +6,17 @@ sensitivity scan -> find the optimal sparsity value of each layer. -> fine tune
 channel pruning
 get the pruning channel numbers through pruning ratio -> pruning the channels simply by keep the first n(1-prune_ratio) channels -> sorting the channel by Forbenius norm, the pruning. the accuracy is improved
 -> performance check: remove 30% weights, remove 50% MACs and the latency is a little larger than 50$.
+
+Lab 2:
+K-means quantization
+get the quantization bits -> use kmeans lib to get the 2^n centorids -> quantization aware traing
+
+Linear quantization
+get the scale, zero point ->  per channel quantized weight(zero point is zero) ->  quantized inference
+
+
+1. Set bitwidth
+2. Get Scale Factor and zero point
+3. Quantize feature and quantize weight per channel
+4. Calibration to get Soutput and Zeropoint.
+5. Inference with Quantized Weight and Inputs.
